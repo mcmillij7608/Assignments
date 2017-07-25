@@ -1,0 +1,72 @@
+#
+# 6/29
+# CTI-110 M6HW1 - Random Number File Writer
+# McMillian
+
+#get the random module
+import random
+import sys
+
+#establish global constants to enable "go/no-go" flag in "compare" function
+
+KEEP_GOING = 1
+CONGRATS = -1
+
+def main():
+    target = randomize()
+    print("I'm thinking of a number between 1 and 100....")
+    guessing_game(target)
+
+def randomize():
+    return random.randint(1,100)
+
+def guessing_game(target):
+    count = 0
+    
+    status = KEEP_GOING
+    while status == KEEP_GOING :
+        count = count + 1
+        guess = int(input("Take a guess: "))
+        status = compare(guess, target)
+        
+    if status == CONGRATS:       #hunsattack
+           
+        
+        print()
+        print("Congratulations! You did it!")
+        print("'",guess,"' was correct!")
+        print("It only took you", count, "guesses!")
+        #print("Your top score is", count, "guesses.")
+        print()
+        print("Want to play again?")
+        print("Press Enter to play again!")
+        toQuit = input("To quit, enter 'nah':")
+        
+    if toQuit == "nah":
+        sys.exit()
+    else:
+        print()
+        print("Here we go!")
+        main()
+
+'''def holdFirst(firstCount):
+    return firstCount
+    
+def lowestCount(count, first):
+    if count < first:
+        return count
+    elif count > first:
+        return first'''
+        
+def compare(guess, target):
+    if guess > target:
+        print("Too high, try again!")
+        return (KEEP_GOING)
+    elif guess < target:
+        print("Too low, try again!")
+        return (KEEP_GOING)
+    else:
+        guess == target
+        return (CONGRATS)
+
+main()
