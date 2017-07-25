@@ -1,0 +1,15 @@
+# Using variables, formatting, and percentages
+# 6/6/17
+# CTI-110 M2HW2 - Tip Tax Total
+# Jory McMillian
+#
+
+tot = float(input('What was the total bill for your meal?'))
+tax = tot * .07
+tip = tot * .18
+Total = tot + tax + tip
+
+print('Since your total was $' ,format(tot, ',.2f'))
+print('Your anticipated tax is $', format(tax, ',.2f'))
+print('And an 18% tip is $', format(tip, ',.2f'))
+print('So your total due is $', format(Total, ',.2f'))
