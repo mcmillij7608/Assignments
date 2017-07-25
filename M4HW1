@@ -1,0 +1,15 @@
+#
+#6/25
+#CTI-110 M4HW1 - Sum of Numbers
+#McMillian
+
+num = float(input("Please enter a series of positive numbers."
+                  "Enter a negative number to calculate the sum."))
+t = 0
+while num >= 0:
+    t = t + num
+    num = float(input("Please enter another value."))
+if num < 0:
+    t = t + num
+
+print("Thank you. The sum is",t)
