@@ -1,0 +1,70 @@
+#snowflakes
+#6/20
+
+
+import turtle          
+win = turtle.Screen()  
+elsa = turtle.Turtle()
+
+# add some display options
+elsa.pensize(4)            # increase pensize (takes integer)
+elsa.pencolor("aquamarine")     # set pencolor (takes string)
+elsa.shape("turtle")
+turtle.bgcolor("gainsboro")  #set background color
+elsa.speed(8)                  #set speed (1-10, slow-fast)
+#choose direction to start drawing
+
+elsa.left(0)             
+
+# draw 
+
+for i in range(11):
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(160)
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(30)
+
+elsa.pencolor("aliceblue")
+for i in range(11):
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(160)
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(30)
+elsa.pencolor("paleturquoise")
+for i in range(11):
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(160)
+    elsa.forward(100)
+    elsa.right(20)
+    elsa.forward(100)
+    elsa.right(30)
+    
+
+#position turtle for the next shape    
+elsa.right(170)
+
+#draw next shape
+elsa.pencolor("aliceblue")
+for i in range(6):
+    elsa.forward(45)
+    elsa.left(70)
+    elsa.forward(20)
+    elsa.left(70)
+    elsa.forward(20)
+    elsa.left(70)
+    elsa.forward(45)
+    elsa.left(90)
+
+    
+# end commands
+win.exitonclick() 
