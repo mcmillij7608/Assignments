@@ -1,0 +1,14 @@
+# Bug collector, running total
+# 6/25
+# CTI -110 M4T1 - Bug Collector
+# McMillian
+
+i = 1
+t = 0
+print("This program calculates a running total of bugs collected over 5 days.")
+while i < 6:
+    bugs = int(input("How many bugs today?"))
+    t = t + bugs
+    i = i + 1
+    print("So far, you have collected", t, "bugs!")
+print("Your total for 5 days is",t,"bugs.")
