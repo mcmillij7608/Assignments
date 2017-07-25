@@ -1,0 +1,56 @@
+#
+#CTS-110-1901
+#6/27
+#McMillian
+
+
+
+#main function
+
+def main():
+    print("This program can recieve 5 test scores and will return the average.")
+    score1 = float(input("Enter the first test score: "))
+    displayGrade= determine_grade(score1)
+    print("That letter grade is:",displayGrade)
+    score2 = float(input("Enter the first test score: "))
+    displayGrade= determine_grade(score2)
+    print("That letter grade is:",displayGrade)
+    score3 = float(input("Enter the first test score: "))
+    displayGrade= determine_grade(score3)
+    print("That letter grade is:",displayGrade)
+
+    score4 = float(input("Enter the first test score: "))
+    displayGrade= determine_grade(score4)
+    print("That letter grade is:",displayGrade)
+
+    score5 = float(input("Enter the first test score: "))
+    displayGrade= determine_grade(score5)
+    print("That letter grade is:",displayGrade)
+
+    
+
+    scores = score1 + score2 + score3 + score4 + score5
+    
+
+    displayAverage = calc_average(scores)
+    print("The total average is", displayAverage)
+
+def calc_average(Scores):
+    average = Scores / 5
+    return average
+    
+def determine_grade(numG):
+    if numG >= 90 <= 100:
+        lettG = "A"
+    elif numG >= 80 < 90:
+        lettG = "B"
+    elif numG >= 70 < 80:
+        lettG = "C"
+    elif numG >= 60 < 70:
+        lettG = "D"
+    elif numG < 60:
+        lettG = "F"
+    return lettG
+
+    
+main()
