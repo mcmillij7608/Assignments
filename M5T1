@@ -1,0 +1,22 @@
+#void function
+#CTS-110-1901
+#6/27
+#McMillian
+
+
+
+
+#define main function
+
+def main():
+    convert()
+
+#define conversion function  
+def convert():
+    k = float(input("Enter kilometers to convert: "))
+    m = k * 0.6214
+    print("That equals", m,"miles.")
+    
+
+#run the main function
+main()
