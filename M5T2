@@ -1,0 +1,23 @@
+#return function
+#CTS-110-1901
+#6/27
+#McMillian
+
+
+
+
+#define main function
+
+def main():
+    f = int(input("How many feet would you like to convert to inches?"))
+    feet_to_inches(f)    #call feet to inches funcition with "f" variable
+    print("There are", feet_to_inches(f),"inches in", f,"ft.")
+
+#run the conversion calculation by
+#defining the feet to inches function with "f" parameter
+def feet_to_inches(f):
+    i =  12 * f       
+    return i
+
+#run the main function
+main()
